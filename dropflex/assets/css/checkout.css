@@ -1,0 +1,264 @@
+/* Checkout Styles */
+.dropflex-checkout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+.checkout-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.checkout-logo {
+    margin-bottom: 1rem;
+}
+
+.checkout-logo img {
+    height: 40px;
+}
+
+.checkout-steps {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.checkout-step {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--df-text-light);
+}
+
+.checkout-step.active {
+    color: var(--df-primary);
+}
+
+.step-number {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--df-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.checkout-step.active .step-number {
+    background: var(--df-primary);
+    color: white;
+}
+
+/* Content */
+.checkout-content {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 2rem;
+}
+
+@media (max-width: 992px) {
+    .checkout-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Form */
+.checkout-form {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+}
+
+.form-section:last-child {
+    margin-bottom: 0;
+}
+
+.form-section h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-field {
+    margin-bottom: 1rem;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-field input,
+.form-field select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--df-border);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    outline: none;
+    border-color: var(--df-primary);
+}
+
+/* Summary */
+.checkout-summary {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.summary-header {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--df-border);
+    margin-bottom: 1rem;
+}
+
+.summary-items {
+    margin-bottom: 1.5rem;
+}
+
+.summary-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.item-image {
+    width: 64px;
+    height: 64px;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-name {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.item-price {
+    color: var(--df-text-light);
+}
+
+.summary-totals {
+    border-top: 1px solid var(--df-border);
+    padding-top: 1rem;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.total-row.final {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-top: 1rem;
+}
+
+/* Payment Methods */
+.payment-methods {
+    margin-top: 2rem;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--df-border);
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-method:hover {
+    border-color: var(--df-primary);
+}
+
+.payment-method.selected {
+    border-color: var(--df-primary);
+    background: var(--df-background);
+}
+
+.payment-method-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.payment-method-info {
+    flex: 1;
+}
+
+.payment-method-name {
+    font-weight: 500;
+}
+
+.payment-method-description {
+    font-size: 0.875rem;
+    color: var(--df-text-light);
+}
+
+/* Buttons */
+.checkout-buttons {
+    margin-top: 2rem;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--df-primary);
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.checkout-button:hover {
+    background: var(--df-primary-dark);
+}
+
+.back-button {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--df-text-light);
+    text-decoration: none;
+}
+
+.back-button:hover {
+    color: var(--df-text);
+}

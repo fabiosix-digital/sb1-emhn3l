@@ -1,0 +1,39 @@
+{
+    "name": "Rodapé Moderno com Colunas",
+    "description": "Rodapé elegante com múltiplas colunas e área de copyright",
+    "preview_image": "footers/modern-columns.jpg",
+    "content": {
+        "html": "<footer class=\"df-footer df-footer-columns\">\n  <div class=\"df-container\">\n    <div class=\"df-footer-grid\">\n      <div class=\"df-footer-column\">\n        <div class=\"df-footer-logo\">\n          <img src=\"{{logo_url}}\" alt=\"{{site_name}}\">\n        </div>\n        <p class=\"df-footer-description\">{{company_description}}</p>\n        <div class=\"df-social-links\">\n          {{social_links}}\n        </div>\n      </div>\n      \n      <div class=\"df-footer-column\">\n        <h3>Links Úteis</h3>\n        {{footer_menu_1}}\n      </div>\n      \n      <div class=\"df-footer-column\">\n        <h3>Produtos</h3>\n        {{footer_menu_2}}\n      </div>\n      \n      <div class=\"df-footer-column\">\n        <h3>Contato</h3>\n        <ul class=\"df-contact-info\">\n          <li><i class=\"fas fa-map-marker-alt\"></i> {{address}}</li>\n          <li><i class=\"fas fa-phone\"></i> {{phone}}</li>\n          <li><i class=\"fas fa-envelope\"></i> {{email}}</li>\n        </ul>\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"df-footer-bottom\">\n    <div class=\"df-container\">\n      <p class=\"df-copyright\">&copy; {{current_year}} {{site_name}}. Todos os direitos reservados.</p>\n    </div>\n  </div>\n</footer>",
+        "css": ".df-footer-columns {\n  background: var(--df-background);\n  padding: 4rem 0 0;\n  color: var(--df-text);\n}\n\n.df-footer-grid {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  gap: 2rem;\n}\n\n.df-footer-logo img {\n  max-height: 40px;\n  margin-bottom: 1rem;\n}\n\n.df-footer-description {\n  margin-bottom: 1.5rem;\n  line-height: 1.6;\n}\n\n.df-social-links {\n  display: flex;\n  gap: 1rem;\n}\n\n.df-social-links a {\n  color: var(--df-text);\n  font-size: 1.25rem;\n  transition: color 0.3s ease;\n}\n\n.df-social-links a:hover {\n  color: var(--df-primary);\n}\n\n.df-footer-column h3 {\n  font-size: 1.25rem;\n  margin-bottom: 1.5rem;\n  color: var(--df-text);\n}\n\n.df-footer-column ul {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n.df-footer-column ul li {\n  margin-bottom: 0.75rem;\n}\n\n.df-footer-column ul a {\n  color: var(--df-text);\n  text-decoration: none;\n  transition: color 0.3s ease;\n}\n\n.df-footer-column ul a:hover {\n  color: var(--df-primary);\n}\n\n.df-contact-info li {\n  display: flex;\n  align-items: center;\n  gap: 0.5rem;\n  margin-bottom: 1rem;\n}\n\n.df-footer-bottom {\n  margin-top: 4rem;\n  padding: 1.5rem 0;\n  border-top: 1px solid var(--df-border);\n}\n\n.df-copyright {\n  text-align: center;\n  margin: 0;\n  color: var(--df-text);\n}\n\n@media (max-width: 992px) {\n  .df-footer-grid {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n\n@media (max-width: 576px) {\n  .df-footer-grid {\n    grid-template-columns: 1fr;\n  }\n}"
+    },
+    "variables": {
+        "logo_height": {
+            "type": "number",
+            "label": "Altura do Logo",
+            "default": 40,
+            "unit": "px"
+        },
+        "column_spacing": {
+            "type": "number",
+            "label": "Espaçamento entre Colunas",
+            "default": 2,
+            "unit": "rem"
+        },
+        "footer_padding": {
+            "type": "number",
+            "label": "Padding Superior",
+            "default": 4,
+            "unit": "rem"
+        }
+    },
+    "customizable": [
+        "background_color",
+        "text_color",
+        "border_color",
+        "logo",
+        "company_description",
+        "social_links",
+        "menus",
+        "contact_info"
+    ]
+}

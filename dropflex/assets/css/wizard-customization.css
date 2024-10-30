@@ -1,0 +1,132 @@
+/**
+ * DropFlex Wizard - Customização
+ */
+
+.dropflex-color-schemes {
+    margin-bottom: 2rem;
+}
+
+.dropflex-schemes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.dropflex-scheme-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.dropflex-scheme-card h4 {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+}
+
+.scheme-preview {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.color-swatch {
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.dropflex-custom-colors {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.dropflex-color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.color-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.color-field label {
+    font-weight: 500;
+    color: #374151;
+}
+
+.dropflex-color-preview {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.preview-container {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.preview-header {
+    padding: 1rem;
+}
+
+.preview-nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.preview-nav a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.preview-hero {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.preview-hero h1 {
+    font-size: 2rem;
+    margin: 0 0 1rem;
+}
+
+.preview-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.preview-content {
+    padding: 2rem;
+}
+
+.preview-content h2 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .dropflex-schemes-grid,
+    .dropflex-color-grid {
+        grid-template-columns: 1fr;
+    }
+}

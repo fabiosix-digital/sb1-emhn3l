@@ -1,0 +1,37 @@
+{
+    "name": "Home E-commerce Moderna",
+    "description": "Layout moderno para lojas virtuais com banner principal, produtos em destaque e seções promocionais",
+    "preview_image": "home/modern-ecommerce.jpg",
+    "content": {
+        "html": "<main class=\"df-home df-home-ecommerce\">\n  <!-- Banner Principal -->\n  <section class=\"df-hero-slider\">\n    <div class=\"df-container\">\n      <div class=\"df-slides\">\n        {{hero_slides}}\n      </div>\n      <div class=\"df-slider-nav\">\n        <button class=\"df-prev\"><i class=\"fas fa-chevron-left\"></i></button>\n        <button class=\"df-next\"><i class=\"fas fa-chevron-right\"></i></button>\n      </div>\n    </div>\n  </section>\n  \n  <!-- Categorias em Destaque -->\n  <section class=\"df-featured-categories\">\n    <div class=\"df-container\">\n      <h2>Categorias em Destaque</h2>\n      <div class=\"df-categories-grid\">\n        {{featured_categories}}\n      </div>\n    </div>\n  </section>\n  \n  <!-- Produtos em Destaque -->\n  <section class=\"df-featured-products\">\n    <div class=\"df-container\">\n      <h2>Produtos em Destaque</h2>\n      <div class=\"df-products-grid\">\n        {{featured_products}}\n      </div>\n    </div>\n  </section>\n  \n  <!-- Banner Promocional -->\n  <section class=\"df-promo-banner\">\n    <div class=\"df-container\">\n      <div class=\"df-promo-content\">\n        <h2>{{promo_title}}</h2>\n        <p>{{promo_description}}</p>\n        <a href=\"{{promo_link}}\" class=\"df-button\">{{promo_button_text}}</a>\n      </div>\n    </div>\n  </section>\n  \n  <!-- Produtos Mais Vendidos -->\n  <section class=\"df-bestsellers\">\n    <div class=\"df-container\">\n      <h2>Mais Vendidos</h2>\n      <div class=\"df-products-grid\">\n        {{bestseller_products}}\n      </div>\n    </div>\n  </section>\n  \n  <!-- Newsletter -->\n  <section class=\"df-newsletter\">\n    <div class=\"df-container\">\n      <div class=\"df-newsletter-content\">\n        <h2>{{newsletter_title}}</h2>\n        <p>{{newsletter_description}}</p>\n        <form class=\"df-newsletter-form\">\n          <input type=\"email\" placeholder=\"Seu e-mail\" required>\n          <button type=\"submit\" class=\"df-button\">Inscrever-se</button>\n        </form>\n      </div>\n    </div>\n  </section>\n</main>",
+        "css": ".df-home-ecommerce {\n  padding-bottom: 4rem;\n}\n\n/* Hero Slider */\n.df-hero-slider {\n  position: relative;\n  margin-bottom: 4rem;\n}\n\n.df-slides {\n  position: relative;\n  overflow: hidden;\n  border-radius: 1rem;\n}\n\n.df-slider-nav button {\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  background: rgba(255,255,255,0.9);\n  border: none;\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n\n.df-slider-nav button:hover {\n  background: var(--df-primary);\n  color: white;\n}\n\n.df-prev {\n  left: 1rem;\n}\n\n.df-next {\n  right: 1rem;\n}\n\n/* Categorias */\n.df-featured-categories {\n  margin-bottom: 4rem;\n}\n\n.df-categories-grid {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  gap: 1.5rem;\n}\n\n/* Produtos */\n.df-products-grid {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  gap: 1.5rem;\n  margin-top: 2rem;\n}\n\n.df-product-card {\n  background: white;\n  border-radius: 0.5rem;\n  overflow: hidden;\n  transition: transform 0.3s ease;\n}\n\n.df-product-card:hover {\n  transform: translateY(-5px);\n}\n\n/* Banner Promocional */\n.df-promo-banner {\n  background: var(--df-primary);\n  color: white;\n  padding: 4rem 0;\n  margin: 4rem 0;\n  text-align: center;\n}\n\n.df-promo-content {\n  max-width: 600px;\n  margin: 0 auto;\n}\n\n/* Newsletter */\n.df-newsletter {\n  background: var(--df-background);\n  padding: 4rem 0;\n  text-align: center;\n}\n\n.df-newsletter-content {\n  max-width: 500px;\n  margin: 0 auto;\n}\n\n.df-newsletter-form {\n  display: flex;\n  gap: 1rem;\n  margin-top: 2rem;\n}\n\n.df-newsletter-form input {\n  flex: 1;\n  padding: 0.75rem 1rem;\n  border: 1px solid var(--df-border);\n  border-radius: 0.375rem;\n}\n\n/* Botão Padrão */\n.df-button {\n  display: inline-block;\n  padding: 0.75rem 1.5rem;\n  background: var(--df-primary);\n  color: white;\n  text-decoration: none;\n  border-radius: 0.375rem;\n  transition: background 0.3s ease;\n}\n\n.df-button:hover {\n  background: var(--df-primary-dark);\n}\n\n/* Responsivo */\n@media (max-width: 992px) {\n  .df-categories-grid,\n  .df-products-grid {\n    grid-template-columns: repeat(3, 1fr);\n  }\n}\n\n@media (max-width: 768px) {\n  .df-categories-grid,\n  .df-products-grid {\n    grid-template-columns: repeat(2, 1fr);\n  }\n  \n  .df-newsletter-form {\n    flex-direction: column;\n  }\n}\n\n@media (max-width: 576px) {\n  .df-categories-grid,\n  .df-products-grid {\n    grid-template-columns: 1fr;\n  }\n}"
+    },
+    "variables": {
+        "hero_height": {
+            "type": "number",
+            "label": "Altura do Banner",
+            "default": 500,
+            "unit": "px"
+        },
+        "grid_columns": {
+            "type": "number",
+            "label": "Colunas do Grid",
+            "default": 4,
+            "unit": null
+        },
+        "section_spacing": {
+            "type": "number",
+            "label": "Espaçamento entre Seções",
+            "default": 4,
+            "unit": "rem"
+        }
+    },
+    "customizable": [
+        "hero_slides",
+        "featured_categories",
+        "featured_products",
+        "promo_banner",
+        "bestseller_products",
+        "newsletter"
+    ]
+}
